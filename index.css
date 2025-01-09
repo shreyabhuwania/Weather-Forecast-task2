@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgb(5, 5, 21);
+    padding: 20px;
+}
+
+.country {
+    width: 300px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0; /* Removed padding to adjust alignment */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: hsl(162, 48%, 20%);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,121,118,0.6868872549019608) 65%, rgba(2,0,36,1) 100%);
+}
+
+.country h2 {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    margin: 0; /* Ensures no margin */
+    border-radius: 10px 10px 0 0;
+}
+
+.country img {
+    width: 100px;
+    height: auto;
+    margin: 10px 0;
+}
+
+.country p {
+    margin: 10px 0;
+}
+
+.country button {
+    padding: 10px 20px;
+    border: none; /* Changed to 'none' */
+    border-radius: 5px;
+    margin-top: 5px;
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,121,118,0.6868872549019608) 65%, rgba(2,0,36,1) 100%);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.modal { /* Added modal styles */
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content { /* Added modal content styles */
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.close { /* Added close button styles */
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .country {
+        width: 90%; /* Adjust width to fit better on smaller screens */
+        margin: 10px 0;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+}

@@ -3,7 +3,7 @@ const closeBtn = document.querySelector('.close');
 
 // Get weather data from OpenWeatherMap API
 async function getWeatherData(cityName) {
-    const apiKey = '3fab5c3f5cc369d93cf2d295a89f1321'; // Replace with your actual API key
+    const apiKey = '3fab5c3f5cc369d93cf2d295a89f1321'; 
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
 
     try {
@@ -35,7 +35,7 @@ function closeModal() {
     modal.style.display = "none";
 }
 
-// Close modal when clicking outside of it
+// Closing modal when clicking outside of it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
